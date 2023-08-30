@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --font-color: #f6f5ae;
+  --form-color: #323432;
+  --others-color: #F54900;
+}
+
+body {
+  font-size: 20px;
+}
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+
+  background-image: linear-gradient(
+    to right bottom,
+    #1f2a33,
+    #1b252c,
+    #181f26,
+    #141a1f,
+    #101519
+  );
+  color: var(--font-color);
+}
+
+header {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vh;
+
+  font-family: 'Alegreya', serif;
+  margin: 4vh auto;
+}
+
+form {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4vh;
+
+  background-color: var(--form-color);
+  border-radius: 1.5rem;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.6);
+  transition: 500ms;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 4vh;
+  padding: 2rem 0;
+  width: 50%;
+}
+
+form:hover {
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2);
+  transition: 500ms;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='number'],
+select,
+fieldset,
+textarea,
+button {
+  box-sizing: border-box;
+  width: 45vw;
+  border-radius: .7rem;
+  padding: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+  border: 2px solid var(--others-color);
+  transition: 400ms;
+}
+
+.input-grp {
+  display: flex;
+  flex-flow: column wrap;
+  gap: .25rem;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='number'] {
+  height: 3rem;
+}
+
+fieldset.radios {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+fieldset.checks {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: start;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--others-color);
+}
+
+.radio-grp {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 6px;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+form button {
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: var(--font-color);
+  background-color: var(--others-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+
+  form {
+    width: 90vw;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='number'],
+  select,
+  fieldset,
+  textarea,
+  button {
+    width: 80vw;
+  }
+}

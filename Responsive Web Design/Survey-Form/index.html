@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Customer Request Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/index.css" rel="stylesheet" />
+    <meta name="author" content="Lhee C. Crisostomo" />
+    <meta
+      name="description"
+      content="
+      This form is for clients that are looking for either a programming tutor 
+      or a full-stack developer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1 id="title">Customer Request Form</h1>
+        <p id="description">What service are you in need of?</p>
+      </header>
+      <form id="survey-form">
+        <div class="input-grp">
+          <label for="name" id="name-label">Client Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Juan dela Cruz or Company Name"
+            required
+          />
+        </div>
+        <div class="input-grp">
+          <label for="email" id="email-label">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="client@provider.com"
+            required
+          />
+        </div>
+        <div class="input-grp">
+          <label for="number" id="number-label">Maximum Budget (₱)</label>
+          <input
+            type="number"
+            id="number"
+            min="1000"
+            max="200000"
+            step="10"
+            placeholder="1000"
+            required
+          />
+        </div>
+        <div class="input-grp">
+          <label for="dropdown">Payment Method</label>
+          <select id="dropdown">
+            <option disabled selected value="">Select Payment Method</option>
+            <option value="cash">Cash</option>
+            <option value="gcash">GCash</option>
+            <option value="bank">Bank Transfer</option>
+          </select>
+        </div>
+        <fieldset class="radios">
+          <legend>Desired Service</legend>
+          <label class="radio-grp">
+            <input type="radio" name="service" value="tutor" />
+            Programming Tutor
+          </label>
+          <label class="radio-grp">
+            <input
+              type="radio"
+              id="full-stack"
+              name="service"
+              value="full-stack"
+            />
+            Full-Stack Web Developer
+          </label>
+        </fieldset>
+        <fieldset class="checks">
+          <legend>Nature of the Work</legend>
+          <label>
+            <input
+              type="checkbox"
+              id="admin"
+              name="admin"
+              value="admin"
+              checked
+            />
+            Admin User
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              id="multipleU"
+              name="multipleU"
+              value="multipleU"
+            />
+            Multiple Users
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              id="interactiveP"
+              name="interactiveP"
+              value="interactiveP"
+            />
+            Interactive Page
+          </label>
+          <label>
+            <input type="checkbox" id="form" name="form" value="form" />
+            Form
+          </label>
+        </fieldset>
+        <div class="input-grp">
+          <label for="special-instructions">Special Instructions</label>
+          <textarea class="special-instructions"></textarea>
+        </div>
+        <button type="submit" id="submit">SUBMIT</button>
+      </form>
+    </main>
+  </body>
+</html>
